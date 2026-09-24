@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>About Aawishkar Ghimire | Designs</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background: #070b14;
+        color: white;
+
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      /* NAVBAR */
+
+      nav {
+        position: fixed;
+
+        top: 0;
+        left: 0;
+
+        width: 100%;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        padding: 20px 8%;
+
+        background: rgba(7, 11, 20, 0.88);
+
+        backdrop-filter: blur(12px);
+
+        border-bottom: 1px solid #1c2638;
+
+        z-index: 1000;
+      }
+
+      .logo {
+        color: white;
+
+        text-decoration: none;
+
+        font-size: 24px;
+
+        font-weight: bold;
+      }
+
+      .logo span {
+        color: #00d9ff;
+      }
+
+      .back {
+        color: #929daf;
+
+        text-decoration: none;
+
+        transition: 0.3s;
+      }
+
+      .back:hover {
+        color: #00d9ff;
+      }
+
+      /* MAIN */
+
+      .container {
+        max-width: 1100px;
+
+        margin: auto;
+
+        padding: 140px 20px 80px;
+      }
+
+      .title {
+        text-align: center;
+
+        font-size: clamp(40px, 7vw, 65px);
+
+        margin-bottom: 15px;
+      }
+
+      .gradient {
+        background: linear-gradient(135deg, #6c63ff, #00d9ff);
+
+        -webkit-background-clip: text;
+
+        -webkit-text-fill-color: transparent;
+      }
+
+      .subtitle {
+        max-width: 700px;
+
+        margin: auto;
+
+        text-align: center;
+
+        color: #929daf;
+
+        line-height: 1.8;
+
+        margin-bottom: 55px;
+      }
+
+      /* DESIGN GRID */
+
+      .design-grid {
+        display: grid;
+
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: 22px;
+      }
+
+      .design-card {
+        min-height: 270px;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 30px;
+
+        border-radius: 20px;
+
+        border: 1px solid #1c2638;
+
+        background: linear-gradient(145deg, #10182a, #0b101b);
+
+        transition: 0.3s ease;
+
+        overflow: hidden;
+
+        position: relative;
+      }
+
+      .design-card::before {
+        content: "";
+
+        position: absolute;
+
+        width: 150px;
+        height: 150px;
+
+        border-radius: 50%;
+
+        background: rgba(0, 217, 255, 0.08);
+
+        filter: blur(30px);
+
+        top: -50px;
+        right: -50px;
+      }
+
+      .design-card:hover {
+        transform: translateY(-8px);
+
+        border-color: #00d9ff;
+
+        box-shadow: 0 18px 45px rgba(0, 217, 255, 0.08);
+      }
+
+      .design-icon {
+        width: 90px;
+        height: 90px;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 22px;
+
+        font-size: 45px;
+
+        margin-bottom: 20px;
+
+        background: linear-gradient(135deg, #6c63ff, #00d9ff);
+
+        box-shadow: 0 10px 30px rgba(0, 217, 255, 0.12);
+      }
+
+      .design-card h2 {
+        margin-bottom: 10px;
+      }
+
+      .design-card p {
+        color: #929daf;
+
+        line-height: 1.6;
+
+        font-size: 14px;
+      }
+
+      /* DESIGN TYPES */
+
+      .design-type {
+        display: inline-block;
+
+        margin-top: 15px;
+
+        padding: 6px 12px;
+
+        border-radius: 20px;
+
+        color: #00d9ff;
+
+        background: #151e30;
+
+        border: 1px solid #263247;
+
+        font-size: 12px;
+      }
+
+      /* ABOUT */
+
+      .about {
+        max-width: 850px;
+
+        margin: 60px auto 0;
+
+        padding: 35px;
+
+        text-align: center;
+
+        border-radius: 20px;
+
+        background: #0e1524;
+
+        border: 1px solid #1c2638;
+      }
+
+      .about h2 {
+        margin-bottom: 15px;
+      }
+
+      .about p {
+        color: #929daf;
+
+        line-height: 1.8;
+
+        margin-bottom: 22px;
+      }
+
+      /* BUTTON */
+
+      .btn {
+        display: inline-block;
+
+        padding: 12px 22px;
+
+        border-radius: 10px;
+
+        text-decoration: none;
+
+        color: white;
+
+        font-weight: bold;
+
+        background: linear-gradient(135deg, #6c63ff, #00d9ff);
+
+        transition: 0.3s;
+      }
+
+      .btn:hover {
+        transform: translateY(-3px);
+
+        box-shadow: 0 10px 25px rgba(0, 217, 255, 0.15);
+      }
+
+      /* FOOTER */
+
+      footer {
+        text-align: center;
+
+        padding: 25px;
+
+        color: #647084;
+
+        border-top: 1px solid #1c2638;
+
+        font-size: 13px;
+      }
+
+      /* MOBILE */
+
+      @media (max-width: 768px) {
+        nav {
+          padding: 17px 5%;
+        }
+
+        .design-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .container {
+          padding-top: 120px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+
+    <nav>
+      <a href="index.html" class="logo"> Aawishkar<span>.</span> </a>
+
+      <a href="projects.html" class="back"> ← Back to Projects </a>
+    </nav>
+
+    <!-- MAIN -->
+
+    <main class="container">
+      <h1 class="title">
+        My
+
+        <span class="gradient"> Designs </span>
+      </h1>
+
+      <p class="subtitle">
+        Welcome to my Graphic Design practice space. These are the types of
+        creative designs and visual projects I am learning and exploring as a
+        beginner designer.
+      </p>
+
+      <!-- DESIGN CARDS -->
+
+      <div class="design-grid">
+        <!-- DESIGN 1 -->
+
+        <div class="design-card">
+          <div class="design-icon">🎨</div>
+
+          <h2>Creative Posters</h2>
+
+          <p>
+            Practicing colors, typography, composition and creative layouts
+            through poster designs.
+          </p>
+
+          <span class="design-type"> Poster Design </span>
+        </div>
+
+        <!-- DESIGN 2 -->
+
+        <div class="design-card">
+          <div class="design-icon">🖼️</div>
+
+          <h2>Social Media Designs</h2>
+
+          <p>
+            Exploring clean and attractive visual content for social media
+            platforms.
+          </p>
+
+          <span class="design-type"> Social Media </span>
+        </div>
+
+        <!-- DESIGN 3 -->
+
+        <div class="design-card">
+          <div class="design-icon">✏️</div>
+
+          <h2>Typography</h2>
+
+          <p>
+            Learning how fonts, spacing and text hierarchy can improve a design.
+          </p>
+
+          <span class="design-type"> Typography </span>
+        </div>
+
+        <!-- DESIGN 4 -->
+
+        <div class="design-card">
+          <div class="design-icon">🌈</div>
+
+          <h2>Color Experiments</h2>
+
+          <p>
+            Experimenting with color combinations, gradients and visual balance.
+          </p>
+
+          <span class="design-type"> Color Theory </span>
+        </div>
+
+        <!-- DESIGN 5 -->
+
+        <div class="design-card">
+          <div class="design-icon">💻</div>
+
+          <h2>UI Design</h2>
+
+          <p>
+            Practicing modern interfaces, cards, buttons and layouts for
+            websites.
+          </p>
+
+          <span class="design-type"> UI / Web Design </span>
+        </div>
+
+        <!-- DESIGN 6 -->
+
+        <div class="design-card">
+          <div class="design-icon">🚀</div>
+
+          <h2>Future Designs</h2>
+
+          <p>
+            More creative projects will be added here as I continue learning
+            Graphic Design.
+          </p>
+
+          <span class="design-type"> Coming Soon </span>
+        </div>
+      </div>
+
+      <!-- ABOUT DESIGN -->
+
+      <section class="about">
+        <h2>
+          My
+
+          <span class="gradient"> Design Journey </span>
+        </h2>
+
+        <p>
+          Graphic Design is one of the areas I am interested in. I am learning
+          how colors, typography, shapes and layouts work together to
+          communicate an idea.
+        </p>
+
+        <p>
+          As I continue practicing, I will add my real design works and creative
+          projects to this page.
+        </p>
+
+        <a href="projects.html" class="btn"> ← Back to Projects </a>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+
+    <footer>© 2026 Aawishkar Ghimire. Graphic Design Practice.</footer>
+  </body>
+</html>

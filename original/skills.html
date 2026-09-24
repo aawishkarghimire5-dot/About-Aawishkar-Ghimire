@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+  <title>About Aawishkar Ghimire | Skills</title>
+
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .skill-card {
+            background: #0e1524;
+            border: 1px solid #1c2638;
+            border-radius: 18px;
+            padding: 28px;
+            transition: 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-7px);
+            border-color: #00d9ff;
+            box-shadow: 0 15px 40px rgba(0, 217, 255, 0.08);
+        }
+
+        .skill-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .skill-name {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .skill-percent {
+            color: #00d9ff;
+            font-weight: bold;
+        }
+
+        .skill-description {
+            color: #929daf;
+            margin-bottom: 18px;
+        }
+
+        .example {
+            background: #080d18;
+            border-left: 3px solid #00d9ff;
+            padding: 12px 15px;
+            border-radius: 5px;
+            color: #aeb8c8;
+            font-size: 14px;
+            margin-top: 18px;
+        }
+
+        .example strong {
+            color: white;
+        }
+
+        .bar {
+            height: 8px;
+            background: #1b2638;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .progress {
+            height: 100%;
+            border-radius: 20px;
+            background: linear-gradient(
+                90deg,
+                #6c63ff,
+                #00d9ff
+            );
+        }
+
+        @media (max-width: 768px) {
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- NAVBAR -->
+
+<nav>
+
+    <a href="index.html" class="logo">
+        Aawishkar<span>.</span>
+    </a>
+
+    <ul>
+
+        <li>
+            <a href="index.html">
+                Home
+            </a>
+        </li>
+
+        <li>
+            <a href="about.html">
+                About
+            </a>
+        </li>
+
+        <li>
+            <a href="skills.html" class="active">
+                Skills
+            </a>
+        </li>
+
+        <li>
+            <a href="projects.html">
+                Projects
+            </a>
+        </li>
+
+        <li>
+            <a href="contact.html">
+                Contact
+            </a>
+        </li>
+
+    </ul>
+
+</nav>
+
+
+
+<!-- SKILLS -->
+
+<section class="page">
+
+    <div class="container">
+
+        <h1 class="page-title">
+
+            My <span class="gradient">
+                Skills
+            </span>
+
+        </h1>
+
+
+        <p class="page-subtitle">
+
+            Technologies and creative skills
+            I'm learning and improving.
+
+        </p>
+
+
+
+        <div class="skills-grid">
+
+
+            <!-- HTML -->
+
+            <div class="skill-card">
+
+                <div class="skill-header">
+
+                    <span class="skill-name">
+                        🌐 HTML
+                    </span>
+
+                    <span class="skill-percent">
+                        85%
+                    </span>
+
+                </div>
+
+
+                <p class="skill-description">
+
+                    I can create structured and
+                    semantic web pages using HTML.
+
+                </p>
+
+
+                <div class="bar">
+
+                    <div
+                        class="progress"
+                        style="width:85%">
+                    </div>
+
+                </div>
+
+
+                <div class="example">
+
+                    <strong>Example:</strong>
+
+                    Creating portfolio pages,
+                    landing pages and website layouts.
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CSS -->
+
+            <div class="skill-card">
+
+                <div class="skill-header">
+
+                    <span class="skill-name">
+                        🎨 CSS
+                    </span>
+
+                    <span class="skill-percent">
+                        80%
+                    </span>
+
+                </div>
+
+
+                <p class="skill-description">
+
+                    I use CSS to create modern,
+                    responsive and attractive
+                    website designs.
+
+                </p>
+
+
+                <div class="bar">
+
+                    <div
+                        class="progress"
+                        style="width:80%">
+                    </div>
+
+                </div>
+
+
+                <div class="example">
+
+                    <strong>Example:</strong>
+
+                    Dark themes, animations,
+                    responsive layouts and
+                    modern UI designs.
+
+                </div>
+
+            </div>
+
+
+
+            <!-- JAVASCRIPT -->
+
+            <div class="skill-card">
+
+                <div class="skill-header">
+
+                    <span class="skill-name">
+                        ⚡ JavaScript
+                    </span>
+
+                    <span class="skill-percent">
+                        65%
+                    </span>
+
+                </div>
+
+
+                <p class="skill-description">
+
+                    I'm learning JavaScript to make
+                    websites interactive and dynamic.
+
+                </p>
+
+
+                <div class="bar">
+
+                    <div
+                        class="progress"
+                        style="width:65%">
+                    </div>
+
+                </div>
+
+
+                <div class="example">
+
+                    <strong>Example:</strong>
+
+                    Buttons, menus, animations,
+                    form validation and interactive
+                    website features.
+
+                </div>
+
+            </div>
+
+
+
+            <!-- RESPONSIVE DESIGN -->
+
+            <div class="skill-card">
+
+                <div class="skill-header">
+
+                    <span class="skill-name">
+                        📱 Responsive Web Design
+                    </span>
+
+                    <span class="skill-percent">
+                        75%
+                    </span>
+
+                </div>
+
+
+                <p class="skill-description">
+
+                    I can design websites that work
+                    properly on mobile, tablet and
+                    desktop screens.
+
+                </p>
+
+
+                <div class="bar">
+
+                    <div
+                        class="progress"
+                        style="width:75%">
+                    </div>
+
+                </div>
+
+
+                <div class="example">
+
+                    <strong>Example:</strong>
+
+                    Mobile-friendly portfolio,
+                    landing pages and responsive
+                    navigation menus.
+
+                </div>
+
+            </div>
+
+
+
+            <!-- GRAPHIC DESIGN -->
+
+            <div class="skill-card">
+
+                <div class="skill-header">
+
+                    <span class="skill-name">
+                        🖌️ Graphic Design
+                    </span>
+
+                    <span class="skill-percent">
+                        70%
+                    </span>
+
+                </div>
+
+
+                <p class="skill-description">
+
+                    I enjoy creating creative visual
+                    designs and experimenting with
+                    different styles.
+
+                </p>
+
+
+                <div class="bar">
+
+                    <div
+                        class="progress"
+                        style="width:70%">
+                    </div>
+
+                </div>
+
+
+                <div class="example">
+
+                    <strong>Example:</strong>
+
+                    Social media posts, posters,
+                    thumbnails, banners and
+                    simple brand designs.
+
+                </div>
+
+            </div>
+
+
+
+            <!-- UI UX -->
+
+            <div class="skill-card">
+
+                <div class="skill-header">
+
+                    <span class="skill-name">
+                        ✨ UI/UX Basics
+                    </span>
+
+                    <span class="skill-percent">
+                        60%
+                    </span>
+
+                </div>
+
+
+                <p class="skill-description">
+
+                    I'm learning how to create
+                    simple, clean and user-friendly
+                    interfaces.
+
+                </p>
+
+
+                <div class="bar">
+
+                    <div
+                        class="progress"
+                        style="width:60%">
+                    </div>
+
+                </div>
+
+
+                <div class="example">
+
+                    <strong>Example:</strong>
+
+                    Website layouts, navigation,
+                    buttons, color combinations
+                    and user-friendly interfaces.
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    © 2026 Aawishkar Ghimire.
+    All Rights Reserved.
+
+</footer>
+
+
+</body>
+
+</html>

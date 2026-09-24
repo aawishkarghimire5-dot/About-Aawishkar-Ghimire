@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>About Aawishkar Ghimire | Contact</title>
+
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <style>
+
+        /* =========================
+           CONTACT PAGE
+        ========================= */
+
+        .contact-wrapper {
+            max-width: 1050px;
+            margin: auto;
+        }
+
+
+        .contact-intro {
+            max-width: 750px;
+            margin: 0 auto 45px;
+            text-align: center;
+            color: #929daf;
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
+
+        /* =========================
+           CONTACT CARDS
+        ========================= */
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+
+        .contact-card {
+            background: #0e1524;
+            border: 1px solid #1c2638;
+            border-radius: 20px;
+            padding: 30px;
+
+            transition: 0.3s ease;
+        }
+
+
+        .contact-card:hover {
+            transform: translateY(-7px);
+            border-color: #00d9ff;
+
+            box-shadow:
+                0 15px 40px
+                rgba(0, 217, 255, 0.08);
+        }
+
+
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 15px;
+
+            background: #151e30;
+
+            color: #00d9ff;
+
+            font-size: 26px;
+
+            margin-bottom: 20px;
+        }
+
+
+        .contact-card h2 {
+            margin-bottom: 10px;
+        }
+
+
+        .contact-card p {
+            color: #929daf;
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+
+
+        .contact-link {
+            color: #00d9ff;
+            text-decoration: none;
+            word-break: break-word;
+        }
+
+
+        .contact-link:hover {
+            text-decoration: underline;
+        }
+
+
+
+        /* =========================
+           SOCIAL MEDIA
+        ========================= */
+
+        .social-section {
+            margin-top: 55px;
+        }
+
+
+        .social-title {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 28px;
+        }
+
+
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+
+        .social-card {
+            padding: 28px 20px;
+
+            border-radius: 20px;
+
+            background: #0e1524;
+
+            border: 1px solid #1c2638;
+
+            text-decoration: none;
+
+            color: white;
+
+            text-align: center;
+
+            transition: 0.3s ease;
+        }
+
+
+        .social-card i {
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+
+        .social-card h3 {
+            margin-bottom: 7px;
+        }
+
+
+        .social-card p {
+            color: #929daf;
+            font-size: 14px;
+        }
+
+
+        /* Instagram */
+
+        .instagram:hover {
+            transform: translateY(-7px);
+            border-color: #e1306c;
+
+            box-shadow:
+                0 15px 35px
+                rgba(225, 48, 108, 0.10);
+        }
+
+
+        .instagram i {
+            color: #e1306c;
+        }
+
+
+        /* Facebook */
+
+        .facebook:hover {
+            transform: translateY(-7px);
+            border-color: #1877f2;
+
+            box-shadow:
+                0 15px 35px
+                rgba(24, 119, 242, 0.10);
+        }
+
+
+        .facebook i {
+            color: #1877f2;
+        }
+
+
+        /* TikTok */
+
+        .tiktok:hover {
+            transform: translateY(-7px);
+            border-color: #00f2ea;
+
+            box-shadow:
+                0 15px 35px
+                rgba(0, 242, 234, 0.10);
+        }
+
+
+        .tiktok i {
+            color: #00f2ea;
+        }
+
+
+
+        /* =========================
+           MESSAGE BOX
+        ========================= */
+
+        .message-box {
+            margin-top: 40px;
+
+            padding: 35px;
+
+            text-align: center;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #10182a,
+                    #0c1220
+                );
+
+            border: 1px solid #1c2638;
+
+            border-radius: 20px;
+        }
+
+
+        .message-box h2 {
+            margin-bottom: 12px;
+        }
+
+
+        .message-box p {
+            color: #929daf;
+            line-height: 1.7;
+            margin-bottom: 22px;
+        }
+
+
+        .email-button {
+            display: inline-flex;
+
+            align-items: center;
+            gap: 10px;
+
+            padding: 13px 23px;
+
+            border-radius: 10px;
+
+            text-decoration: none;
+
+            color: white;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #6c63ff,
+                    #00d9ff
+                );
+
+            font-weight: bold;
+
+            transition: 0.3s ease;
+        }
+
+
+        .email-button:hover {
+            transform: translateY(-4px);
+
+            box-shadow:
+                0 12px 30px
+                rgba(0, 217, 255, 0.18);
+        }
+
+
+
+        /* =========================
+           AVAILABILITY
+        ========================= */
+
+        .availability {
+            margin-top: 25px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            gap: 9px;
+
+            color: #929daf;
+
+            font-size: 14px;
+        }
+
+
+        .status-dot {
+            width: 9px;
+            height: 9px;
+
+            background: #22c55e;
+
+            border-radius: 50%;
+
+            box-shadow:
+                0 0 10px
+                rgba(34, 197, 94, 0.7);
+        }
+
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 768px) {
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .social-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .contact-card {
+                padding: 25px;
+            }
+
+
+            .message-box {
+                padding: 25px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+
+<body>
+
+
+<!-- =========================
+     NAVBAR
+========================= -->
+
+<nav>
+
+    <a href="index.html" class="logo">
+
+        Aawishkar<span>.</span>
+
+    </a>
+
+
+    <ul>
+
+        <li>
+
+            <a href="index.html">
+
+                Home
+
+            </a>
+
+        </li>
+
+
+        <li>
+
+            <a href="about.html">
+
+                About
+
+            </a>
+
+        </li>
+
+
+        <li>
+
+            <a href="skills.html">
+
+                Skills
+
+            </a>
+
+        </li>
+
+
+        <li>
+
+            <a href="projects.html">
+
+                Projects
+
+            </a>
+
+        </li>
+
+
+        <li>
+
+            <a
+                href="contact.html"
+                class="active">
+
+                Contact
+
+            </a>
+
+        </li>
+
+    </ul>
+
+</nav>
+
+
+
+<!-- =========================
+     CONTACT SECTION
+========================= -->
+
+<section class="page">
+
+    <div class="container">
+
+
+        <h1 class="page-title">
+
+            Contact
+
+            <span class="gradient">
+
+                Me
+
+            </span>
+
+        </h1>
+
+
+        <p class="page-subtitle">
+
+            Let's connect and create
+            something amazing together.
+
+        </p>
+
+
+
+        <div class="contact-wrapper">
+
+
+            <!-- INTRO -->
+
+            <p class="contact-intro">
+
+                Whether you want to talk about
+                Web Development, Graphic Design,
+                a project idea, or simply want
+                to connect with me, feel free
+                to reach out through email or
+                social media.
+
+            </p>
+
+
+
+            <!-- =========================
+                 CONTACT INFORMATION
+            ========================= -->
+
+            <div class="contact-grid">
+
+
+                <!-- EMAIL -->
+
+                <div class="contact-card">
+
+
+                    <div class="contact-icon">
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                    </div>
+
+
+                    <h2>
+
+                        Email
+
+                    </h2>
+
+
+                    <p>
+
+                        Send me an email for
+                        project discussions,
+                        questions or collaboration.
+
+                    </p>
+
+
+                    <a
+                        href="mailto:ghimireaawishkar@gmail.com"
+                        class="contact-link">
+
+                        ghimireaawishkar@gmail.com
+
+                    </a>
+
+
+                </div>
+
+
+
+                <!-- LOCATION -->
+
+                <div class="contact-card">
+
+
+                    <div class="contact-icon">
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                    </div>
+
+
+                    <h2>
+
+                        Location
+
+                    </h2>
+
+
+                    <p>
+
+                        I'm currently based
+                        in Nepal and I'm
+                        interested in connecting
+                        with creative people.
+
+                    </p>
+
+
+                    <span class="contact-link">
+
+                        🇳🇵 Nepal
+
+                    </span>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =========================
+                 SOCIAL MEDIA
+            ========================= -->
+
+            <div class="social-section">
+
+
+                <h2 class="social-title">
+
+                    Find Me On
+
+                    <span class="gradient">
+
+                        Social Media
+
+                    </span>
+
+                </h2>
+
+
+
+                <div class="social-grid">
+
+
+                    <!-- INSTAGRAM -->
+
+                    <a
+                        href="https://www.instagram.com/ghimire_456"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="social-card instagram">
+
+
+                        <i class="fa-brands fa-instagram"></i>
+
+
+                        <h3>
+
+                            Instagram
+
+                        </h3>
+
+
+                        <p>
+
+                            @ghimire_456
+
+                        </p>
+
+
+                    </a>
+
+
+
+                    <!-- FACEBOOK -->
+
+                    <a
+                        href="#"
+                        class="social-card facebook">
+
+
+                        <i class="fa-brands fa-facebook-f"></i>
+
+
+                        <h3>
+
+                            Facebook
+
+                        </h3>
+
+
+                        <p>
+
+                            Aawishkar Ghimire
+
+                        </p>
+
+
+                    </a>
+
+
+
+                    <!-- TIKTOK -->
+
+                    <a
+                        href="https://www.tiktok.com/@Ghimire_456"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="social-card tiktok">
+
+
+                        <i class="fa-brands fa-tiktok"></i>
+
+
+                        <h3>
+
+                            TikTok
+
+                        </h3>
+
+
+                        <p>
+
+                            @Ghimire_456
+
+                        </p>
+
+
+                    </a>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =========================
+                 EMAIL CTA
+            ========================= -->
+
+            <div class="message-box">
+
+
+                <h2>
+
+                    💬 Have a Project Idea?
+
+                </h2>
+
+
+                <p>
+
+                    I'm always interested in
+                    learning new things, building
+                    projects and exploring creative
+                    ideas. If you have something
+                    interesting in mind, let's talk.
+
+                </p>
+
+
+                <a
+                    href="mailto:ghimireaawishkar@gmail.com"
+                    class="email-button">
+
+                    <i class="fa-solid fa-paper-plane"></i>
+
+                    Send Me an Email
+
+                </a>
+
+
+                <div class="availability">
+
+                    <span class="status-dot"></span>
+
+                    Open to learning & new projects
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    © 2026 Aawishkar Ghimire.
+    All Rights Reserved.
+
+</footer>
+
+
+</body>
+
+</html>
+
