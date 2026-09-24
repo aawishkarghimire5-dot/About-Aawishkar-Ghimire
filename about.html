@@ -1,0 +1,772 @@
+```html
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>About Aawishkar Ghimire</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+      /* =========================
+           ABOUT PAGE
+        ========================= */
+
+      .about-wrapper {
+        max-width: 1000px;
+        margin: auto;
+      }
+
+      /* MAIN ABOUT CARD */
+
+      .about-main {
+        position: relative;
+
+        background: #0e1524;
+
+        border: 1px solid #1c2638;
+
+        border-radius: 22px;
+
+        padding: 40px;
+
+        margin-bottom: 25px;
+
+        overflow: hidden;
+
+        transition: 0.3s;
+      }
+
+      .about-main::before {
+        content: "";
+
+        position: absolute;
+
+        width: 220px;
+        height: 220px;
+
+        top: -120px;
+        right: -80px;
+
+        background: #00d9ff;
+
+        opacity: 0.05;
+
+        border-radius: 50%;
+
+        filter: blur(10px);
+      }
+
+      .about-main:hover {
+        border-color: #00d9ff;
+
+        box-shadow: 0 15px 40px rgba(0, 217, 255, 0.06);
+      }
+
+      /* ABOUT HEADER */
+
+      .about-header {
+        text-align: center;
+
+        margin-bottom: 35px;
+      }
+
+      .about-badge {
+        display: inline-block;
+
+        padding: 8px 16px;
+
+        border: 1px solid #263247;
+
+        border-radius: 30px;
+
+        background: #080d18;
+
+        color: #00d9ff;
+
+        font-size: 12px;
+
+        font-weight: bold;
+
+        letter-spacing: 1px;
+
+        margin-bottom: 15px;
+      }
+
+      .about-header h2 {
+        font-size: 36px;
+
+        margin-bottom: 12px;
+      }
+
+      .about-intro {
+        max-width: 680px;
+
+        margin: auto;
+
+        color: #929daf;
+
+        font-size: 17px;
+
+        line-height: 1.7;
+      }
+
+      /* ABOUT CONTENT */
+
+      .about-content {
+        display: grid;
+
+        grid-template-columns: 1.6fr 1fr;
+
+        gap: 30px;
+
+        align-items: start;
+      }
+
+      .about-text p {
+        color: #9da9ba;
+
+        font-size: 16px;
+
+        line-height: 1.8;
+
+        margin-bottom: 18px;
+      }
+
+      .about-text strong {
+        color: white;
+      }
+
+      .highlight {
+        color: #00d9ff;
+      }
+
+      /* SIDE INFORMATION */
+
+      .about-side {
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 14px;
+      }
+
+      .about-mini-card {
+        display: flex;
+
+        align-items: center;
+
+        gap: 15px;
+
+        padding: 18px;
+
+        background: #080d18;
+
+        border: 1px solid #1c2638;
+
+        border-radius: 15px;
+
+        transition: 0.3s;
+      }
+
+      .about-mini-card:hover {
+        transform: translateX(6px);
+
+        border-color: #00d9ff;
+      }
+
+      .mini-icon {
+        width: 48px;
+        height: 48px;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 12px;
+
+        background: linear-gradient(135deg, #171d35, #0d1725);
+
+        font-size: 22px;
+      }
+
+      .about-mini-card span {
+        display: block;
+
+        color: #778399;
+
+        font-size: 12px;
+
+        margin-bottom: 5px;
+      }
+
+      .about-mini-card strong {
+        color: white;
+
+        font-size: 14px;
+      }
+
+      /* MY INTERESTS */
+
+      .interest-section {
+        margin-top: 45px;
+      }
+
+      .interest-section h2 {
+        font-size: 27px;
+
+        margin-bottom: 20px;
+      }
+
+      .interest-grid {
+        display: grid;
+
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: 18px;
+      }
+
+      .interest-card {
+        padding: 25px;
+
+        background: linear-gradient(145deg, #10182a, #0b111e);
+
+        border: 1px solid #1c2638;
+
+        border-radius: 18px;
+
+        transition: 0.3s;
+      }
+
+      .interest-card:hover {
+        transform: translateY(-7px);
+
+        border-color: #00d9ff;
+
+        box-shadow: 0 12px 30px rgba(0, 217, 255, 0.05);
+      }
+
+      .interest-icon {
+        font-size: 32px;
+
+        margin-bottom: 12px;
+      }
+
+      .interest-card h3 {
+        margin-bottom: 8px;
+      }
+
+      .interest-card p {
+        color: #929daf;
+
+        font-size: 14px;
+
+        line-height: 1.6;
+      }
+
+      /* MY JOURNEY */
+
+      .journey-section {
+        margin-top: 45px;
+      }
+
+      .journey-section h2 {
+        font-size: 27px;
+
+        margin-bottom: 20px;
+      }
+
+      .journey {
+        display: grid;
+
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: 20px;
+      }
+
+      .journey-card {
+        padding: 25px;
+
+        background: #0e1524;
+
+        border: 1px solid #1c2638;
+
+        border-radius: 18px;
+
+        transition: 0.3s;
+      }
+
+      .journey-card:hover {
+        transform: translateY(-6px);
+
+        border-color: #00d9ff;
+      }
+
+      .journey-number {
+        color: #00d9ff;
+
+        font-size: 13px;
+
+        font-weight: bold;
+
+        margin-bottom: 10px;
+      }
+
+      .journey-card h3 {
+        margin-bottom: 10px;
+      }
+
+      .journey-card p {
+        color: #929daf;
+
+        font-size: 14px;
+
+        line-height: 1.6;
+      }
+
+      /* GOALS */
+
+      .goals-section {
+        margin-top: 45px;
+      }
+
+      .goals-section h2 {
+        font-size: 27px;
+
+        margin-bottom: 20px;
+      }
+
+      .goals {
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 20px;
+      }
+
+      .goal-box {
+        padding: 28px;
+
+        background: linear-gradient(135deg, #10182a, #0c1220);
+
+        border: 1px solid #1c2638;
+
+        border-radius: 18px;
+
+        transition: 0.3s;
+      }
+
+      .goal-box:hover {
+        border-color: #00d9ff;
+
+        transform: translateY(-5px);
+      }
+
+      .goal-icon {
+        font-size: 32px;
+
+        margin-bottom: 12px;
+      }
+
+      .goal-box h3 {
+        margin-bottom: 10px;
+      }
+
+      .goal-box p {
+        color: #929daf;
+
+        line-height: 1.7;
+
+        font-size: 14px;
+      }
+
+      /* QUOTE */
+
+      .about-quote {
+        text-align: center;
+
+        margin-top: 45px;
+
+        padding: 35px 25px;
+
+        background: linear-gradient(135deg, #111a2d, #0c1321);
+
+        border: 1px solid #1c2638;
+
+        border-radius: 20px;
+      }
+
+      .quote-icon {
+        font-size: 45px;
+
+        color: #00d9ff;
+
+        line-height: 1;
+
+        margin-bottom: 10px;
+      }
+
+      .about-quote p {
+        max-width: 650px;
+
+        margin: auto;
+
+        color: #c3ccda;
+
+        font-size: 19px;
+
+        line-height: 1.7;
+
+        font-style: italic;
+      }
+
+      .about-quote span {
+        display: block;
+
+        margin-top: 15px;
+
+        color: #00d9ff;
+
+        font-size: 14px;
+
+        font-weight: bold;
+      }
+
+      /* MOBILE */
+
+      @media (max-width: 768px) {
+        .about-main {
+          padding: 25px;
+        }
+
+        .about-header h2 {
+          font-size: 29px;
+        }
+
+        .about-intro {
+          font-size: 15px;
+        }
+
+        .about-content {
+          grid-template-columns: 1fr;
+        }
+
+        .interest-grid,
+        .journey,
+        .goals {
+          grid-template-columns: 1fr;
+        }
+
+        .about-text p {
+          font-size: 15px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- =========================
+     NAVBAR
+========================= -->
+
+    <nav>
+      <a href="index.html" class="logo">
+        About Aawishkar Ghimire<span>.</span>
+      </a>
+
+      <ul>
+        <li>
+          <a href="index.html"> Home </a>
+        </li>
+
+        <li>
+          <a href="about.html" class="active"> About </a>
+        </li>
+
+        <li>
+          <a href="skills.html"> Skills </a>
+        </li>
+
+        <li>
+          <a href="projects.html"> Projects </a>
+        </li>
+
+        <li>
+          <a href="contact.html"> Contact </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- =========================
+     ABOUT PAGE
+========================= -->
+
+    <section class="page">
+      <div class="container">
+        <h1 class="page-title">
+          About
+          <span class="gradient"> Me </span>
+        </h1>
+
+        <p class="page-subtitle">
+          A little more about who I am, what I enjoy and where I want to go.
+        </p>
+
+        <div class="about-wrapper">
+          <!-- MAIN ABOUT -->
+
+          <div class="about-main">
+            <div class="about-header">
+              <span class="about-badge"> 👋 GET TO KNOW ME </span>
+
+              <h2>
+                Hello, I'm
+                <span class="gradient"> Aawishkar Ghimire </span>
+              </h2>
+
+              <p class="about-intro">
+                I'm a Class 11 student from Nepal who is passionate about
+                technology, Web Development and Graphic Design.
+              </p>
+            </div>
+
+            <div class="about-content">
+              <div class="about-text">
+                <p>
+                  My name is
+                  <span class="highlight"> Aawishkar Ghimire </span>
+                  and I am currently studying in Class 11 in Nepal 🇳🇵.
+                </p>
+
+                <p>
+                  I have a strong interest in
+                  <span class="highlight"> technology, Web Development </span>
+                  and
+                  <span class="highlight"> Graphic Design </span>. I enjoy
+                  learning how websites are created and how creative design can
+                  make digital experiences more attractive and easier to use.
+                </p>
+
+                <p>
+                  At the moment, I am learning
+                  <span class="highlight"> HTML, CSS and JavaScript </span>
+                  and practicing by building my own projects. Every project
+                  helps me understand something new and improve my skills.
+                </p>
+
+                <p>
+                  I believe that becoming good at something takes
+                  <strong> patience, consistency and practice. </strong>
+                  That's why I try to learn step by step and turn what I learn
+                  into real projects.
+                </p>
+
+                <p>
+                  Along with coding, I also enjoy exploring creative layouts,
+                  colors, typography and visual communication. For me, a good
+                  website should not only work well, but should also look clean
+                  and feel easy to use.
+                </p>
+
+                <p>
+                  My long-term goal is to become a
+                  <span class="highlight">
+                    professional Web Developer and Graphic Designer
+                  </span>
+                  and create modern, useful and creative digital experiences.
+                </p>
+              </div>
+
+              <!-- QUICK INFORMATION -->
+
+              <div class="about-side">
+                <div class="about-mini-card">
+                  <div class="mini-icon">🎓</div>
+
+                  <div>
+                    <span> Education </span>
+
+                    <strong> Class 11 Student </strong>
+                  </div>
+                </div>
+
+                <div class="about-mini-card">
+                  <div class="mini-icon">🇳🇵</div>
+
+                  <div>
+                    <span> Country </span>
+
+                    <strong> Nepal </strong>
+                  </div>
+                </div>
+
+                <div class="about-mini-card">
+                  <div class="mini-icon">💻</div>
+
+                  <div>
+                    <span> Currently Learning </span>
+
+                    <strong> HTML • CSS • JavaScript </strong>
+                  </div>
+                </div>
+
+                <div class="about-mini-card">
+                  <div class="mini-icon">🎨</div>
+
+                  <div>
+                    <span> Creative Interest </span>
+
+                    <strong> Graphic Design </strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- INTERESTS -->
+
+          <div class="interest-section">
+            <h2>
+              My
+              <span class="gradient"> Interests </span>
+            </h2>
+
+            <div class="interest-grid">
+              <div class="interest-card">
+                <div class="interest-icon">💻</div>
+
+                <h3>Web Development</h3>
+
+                <p>
+                  I enjoy learning how websites are built and experimenting with
+                  HTML, CSS and JavaScript.
+                </p>
+              </div>
+
+              <div class="interest-card">
+                <div class="interest-icon">🎨</div>
+
+                <h3>Graphic Design</h3>
+
+                <p>
+                  I like exploring colors, layouts, typography and creative
+                  ideas through design.
+                </p>
+              </div>
+
+              <div class="interest-card">
+                <div class="interest-icon">🚀</div>
+
+                <h3>Building Projects</h3>
+
+                <p>
+                  I learn best by creating projects and turning new ideas into
+                  something real and useful.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- JOURNEY -->
+
+          <div class="journey-section">
+            <h2>
+              My
+              <span class="gradient"> Journey </span>
+            </h2>
+
+            <div class="journey">
+              <div class="journey-card">
+                <div class="journey-number">01</div>
+
+                <h3>Student Life</h3>
+
+                <p>
+                  I am currently studying in Class 11 while exploring
+                  technology, coding and creative design.
+                </p>
+              </div>
+
+              <div class="journey-card">
+                <div class="journey-number">02</div>
+
+                <h3>Learning to Code</h3>
+
+                <p>
+                  I am learning HTML, CSS and JavaScript while practicing
+                  through personal projects.
+                </p>
+              </div>
+
+              <div class="journey-card">
+                <div class="journey-number">03</div>
+
+                <h3>Growing & Creating</h3>
+
+                <p>
+                  My goal is to keep improving, build better projects and
+                  develop my own creative style.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- GOALS -->
+
+          <div class="goals-section">
+            <h2>
+              My
+              <span class="gradient"> Goals </span>
+            </h2>
+
+            <div class="goals">
+              <div class="goal-box">
+                <div class="goal-icon">🚀</div>
+
+                <h3>Become a Web Developer</h3>
+
+                <p>
+                  I want to become a skilled Web Developer who can build modern,
+                  responsive and useful websites.
+                </p>
+              </div>
+
+              <div class="goal-box">
+                <div class="goal-icon">🎨</div>
+
+                <h3>Become a Graphic Designer</h3>
+
+                <p>
+                  I also want to improve my design skills and create
+                  professional and meaningful visual designs.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- QUOTE -->
+
+          <div class="about-quote">
+            <div class="quote-icon">"</div>
+
+            <p>
+              I may be at the beginning of my journey, but every line of code
+              and every project takes me one step closer to my goals.
+            </p>
+
+            <span> — Aawishkar Ghimire </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>© 2026 Aawishkar Ghimire. All Rights Reserved.</footer>
+  </body>
+</html>
+```
